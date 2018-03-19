@@ -1,0 +1,10 @@
+
+<h1>Browse Moods</h1>
+
+<%= button_to "Create New Mood", new_link_url, method: :get %>
+
+  <ul>
+    <% @links.each do |link|%>
+      <li><%= link_to link.title, link_url(link) %> : <%= link.url %></li>
+    <% end %>
+  </ul>

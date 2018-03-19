@@ -1,0 +1,2 @@
+class EditLinksToHaveUrl < ApplicationRecord
+end

@@ -1,0 +1,59 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #E6A8FF;
+}
+
+
+.new_post {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 500px;
+}
+
+.textbox {
+  display: flex;
+  width: 66%;
+  height: 80%;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 66%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.article-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 180%;
+  text-decoration: underline;
+}
+
+.date {
+  font-size: 80%;
+}
+
+.article-body {
+  display: flex;
+  outline: 2px solid wheat;
+}
+
+.article-text {
+  margin: 7px;
+  padding: 14px;
+}

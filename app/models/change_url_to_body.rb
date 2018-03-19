@@ -1,0 +1,2 @@
+class ChangeUrlToBody < ApplicationRecord
+end

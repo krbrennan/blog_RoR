@@ -14,8 +14,14 @@
  *= require_self
  */
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .navbar {
-  height: 40px;
+  background: #E6E6E6;
+  height: 4em;
   width: 100%;
   display: inline-flex;
   flex-direction: row;

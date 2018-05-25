@@ -1,21 +1,21 @@
-<h1>Create New Post Here</h1>
+<h1>Create New Mood to Write Articles About</h1>
 <%= button_to "Home", links_url, method: :get %>
 
-<form action="<%= links_url %>" method="post">
+<form id='newMood' action="<%= links_url %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-<label>
+<label id='title'>
   <h2>Title</h2>
-  <input type="text" name="link[title]" value="<%= @link.title %>">
+  <input id='title-field' type="text" name="link[title]" value="<%= @link.title %>">
 </label>
 
-<label>
+<label id='body'>
   <h2>Body</h2>
-  <textarea rows="6" name="link[url]" value="<%= @link.url %>" placeholder="What Kind of Moods Would you like to Put in here?"></textarea>
+  <textarea rows="18" cols="90" name="link[url]" value="<%= @link.url %>" placeholder="What Kind of Moods Would you like to Put in here?"></textarea>
 </label>
 
 <br>
 
-<input type="submit" name="" value="Submit Post">
+<input id='submit-btn' type="submit" name="" value="Submit Post">
 
 </form>

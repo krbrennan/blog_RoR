@@ -6,6 +6,44 @@ body {
   background-color: #E6A8FF;
 }
 
+#newMood {
+  display: flex;
+  flex-direction: column;
+}
+
+#title {
+  display: flex;
+  height: 30px;
+  order: 1;
+  h2 {
+    align-self: center;
+    padding: 1em;
+    margin: 1em;
+  }
+  #title-field {
+    width: 50em;
+  }
+}
+
+#body {
+  display: flex;
+  order: 2;
+  margin-top: 2em;
+  h2 {
+    align-self: center;
+    padding: 1em;
+    margin: 1em;
+  }
+}
+
+#submit-btn {
+  display: flex;
+  order: 3;
+  width: 28em;
+  margin: 2em;
+  justify-content: center;
+  margin-left: 14em;
+}
 
 .new_post {
   display: flex;

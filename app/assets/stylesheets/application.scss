@@ -13,25 +13,33 @@
  *= require_tree .
  *= require_self
  */
-
+* {
+  font-family: Montserrat;
+  font-weight: 400;
+}
 body {
   margin: 0;
   padding: 0;
+  font-family: Montserrat;
 }
 
 .navbar {
-  background: #E6E6E6;
+  background: rgba(0,0,0, .8);
   height: 4em;
   width: 100%;
   display: inline-flex;
   flex-direction: row;
-  flex-wrap: row nowrap;
+  flex-wrap: nowrap;
   align-items: stretch;
   justify-content: space-between;
 
   .nav-items{
     display: inline-flex;
     width:100%;
+  }
+  a {
+    text-decoration: none;
+    color: white;
   }
   li {
     list-style: none;
@@ -44,7 +52,6 @@ body {
     display: flex;
     align-items: center;
 
-
     .signed-in-as {
       margin-right: 14%;
       font-size: 140%;
@@ -53,11 +60,20 @@ body {
       align-items: center;
       flex-grow: 1;
       text-decoration: none;
+      color: white;
     }
 
     .sign-out {
       display: inline-flex;
       padding: 20px;
+    }
+    .sign-out:hover {
+      background: rgba(0,0,0,1);
+      cursor: pointer;
+    }
+    .home:hover {
+      background: rgba(0,0,0,1);
+      cursor: pointer;
     }
 
     .home {
@@ -75,5 +91,104 @@ body {
       display: inline-flex;
       margin: 30px;
     }
+  }
+}
+
+// Sign In
+//
+//
+.sign-in-session {
+  max-width: 300px;
+  padding-top: 2em;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.5);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  .sign-in-form {
+    padding: 4em;
+  }
+
+  .field {
+    margin: 1em 0;
+  }
+  .submit-button {
+    margin-top: 2em;
+  }
+}
+.errors {
+  justify-content: center;
+  background: white;
+  padding: 2em;
+  margin: 0 auto;
+  width: auto;
+  margin: 1em 2em;
+  text-align: center;
+  font-size: 2em;
+  color: red;
+  overflow: hidden;
+}
+
+
+// Sign Up
+
+.sign-up-page {
+  max-width: 300px;
+  padding-top: 2em;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.5);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  .sign-up-form {
+    padding: 4em;
+  }
+
+  .field {
+    margin: 1em 0;
+  }
+  .submit-button {
+    margin-top: 2em;
+  }
+}
+
+
+
+// Browse Moods
+//
+//
+.browse-moods {
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .create-new-mood {
+    text-decoration: none;
+    background: white;
+    padding: 1.5em;
+    margin: 0 auto;
+    border-radius: 20px;
+    color: black;
+    font-weight: 700;
+  }
+  .create-new-mood:hover {
+    background: rgba(255, 127, 80,1.0)
+  }
+
+  .browse-moods-h1 {
+    font-weight: 700;
+  }
+
+  .browse-moods-ul {
+
+  }
+
+  .browse-moods-li {
+
   }
 }

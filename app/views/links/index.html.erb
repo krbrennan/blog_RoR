@@ -1,10 +1,16 @@
+<div class="browse-moods">
 
-<h1>Browse Moods</h1>
 
-<%= button_to "Create New Mood", new_link_url, method: :get %>
+  <h1 class='browse-moods-h1'>Browse Your Moods</h1>
+  <%= link_to "Create New Mood", new_link_url, :class => 'create-new-mood', method: :get %>
 
-  <ul>
-    <% @links.each do |link|%>
-      <li><%= link_to link.title, link_url(link) %> : <%= link.url %></li>
-    <% end %>
-  </ul>
+
+    <ul class='browse-moods-ul'>
+      <% @links.each do |link|%>
+      <div class="browse-moods-li">
+        <li><%= link_to link.title, link_url(link) %> : <%= link.url %></li>
+      </div>
+      <% end %>
+    </ul>
+
+</div>

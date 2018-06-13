@@ -3,7 +3,7 @@
   <head>
     <title>Blog</title>
     <%= csrf_meta_tags %>
-
+    <%= stylesheet_link_tag 'application', "https://fonts.googleapis.com/css?family=Montserrat:400,700", media: 'all' %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
@@ -15,8 +15,8 @@
         <section class="header-content">
           <% if signed_in? %>
             <li class="signed-in-as"><h4>Welcome, <%= current_user.username %></h4></li>
-            <li class="sign-out"><a href="#"><%= button_to 'Sign_out', session_url, method: :delete %></a></li>
-            <li class="home"><a href="#"><%= button_to 'Home', links_url, method: :get %></a></li>
+            <li class="sign-out"><a class='sign-out-button' href="#"><%= link_to 'Logout', session_url, method: :delete %></a></li>
+            <li class="home"><a href="#"><%= link_to 'Home', links_url, method: :get %></a></li>
           <% else %>
             <li class="sign-up"><a href="#"><%= link_to 'Sign Up', new_user_url %></a></li>
             <li class="sign-in"><a href="#"><%= link_to 'Sign In', new_session_url %></a></li>
@@ -27,9 +27,11 @@
 
     <hr>
 
-    <% flash[:errors].try(:each) do |err| %>
-      <%= err %>
-    <% end %>
+      <% flash[:errors].try(:each) do |err| %>
+        <div class="errors">
+          <%= err %>
+        </div>
+      <% end %>
 
     <%= yield %>
   </body>

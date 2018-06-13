@@ -3,12 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-color: #E6A8FF;
+  background-color: rgba(0, 184, 148, 0.5);
 }
 
 #newMood {
   display: flex;
   flex-direction: column;
+
 }
 
 #title {
@@ -17,8 +18,8 @@ body {
   order: 1;
   h2 {
     align-self: center;
-    padding: 1em;
-    margin: 1em;
+    width: 2em;
+    padding: 2em;
   }
   #title-field {
     width: 50em;
@@ -29,20 +30,20 @@ body {
   display: flex;
   order: 2;
   margin-top: 2em;
+  margin-bottom: 2em;
   h2 {
     align-self: center;
-    padding: 1em;
-    margin: 1em;
+    width: 2em;
+    padding: 2em;
   }
 }
 
 #submit-btn {
   display: flex;
   order: 3;
-  width: 28em;
-  margin: 2em;
+  width: 20%;
   justify-content: center;
-  margin-left: 14em;
+  margin: 0 auto;
 }
 
 .new_post {
@@ -80,6 +81,7 @@ body {
   margin: 0 auto;
   font-size: 180%;
   text-decoration: underline;
+
 }
 
 .date {
@@ -94,4 +96,26 @@ body {
 .article-text {
   margin: 7px;
   padding: 14px;
+}
+
+// New Mood
+.new-mood-head {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em;
+  text-align: center;
+
+  .back-to-mood-list-link {
+    background: rgba(112, 161, 255,1.0);
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    margin: 1.5em;
+    border-radius: 25px;
+    margin: 0 auto;
+  }
+}
+
+.new-mood-body {
+  margin: 2em;
 }

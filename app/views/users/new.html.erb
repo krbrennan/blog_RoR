@@ -1,18 +1,21 @@
-<h1>Sign Up!</h1>
+<div class="sign-up-page">
+  <h1>Sign Up!</h1>
 
-<form action="<%= users_url %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <form class='sign-up-form' action="<%= users_url %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-  <label>
-    Username
-    <input type="text" name="user[username]" value="">
-  </label>
+    <label>
+      Username
+      <input class='field' type="text" name="user[username]" value="">
+    </label>
 
-  <label>
-    Password
-    <input type="password" name="user[password]" value="">
-  </label>
+    <label>
+      Password
+      <input class='field' type="password" name="user[password]" value="">
+    </label>
 
-  <input type="submit" value="Sign Up">
+    <input class='submit-button' type="submit" value="Sign Up">
 
-</form>
+  </form>
+
+</div>

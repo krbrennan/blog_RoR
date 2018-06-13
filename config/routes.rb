@@ -4,9 +4,10 @@ Rails.application.routes.draw do
 
 
   resource :session, only: [:new, :create, :destroy]
-  resources :users, only: [:new, :create]
-  resources :links, except: [:destroy] do
-    resources :articles, only: [:create, :new, :show]
+  resources :users do
+    resources :links, except: [:destroy] do
+      resources :articles, only: [:create, :new, :show]
+    end
   end
 
 

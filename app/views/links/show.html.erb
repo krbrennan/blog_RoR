@@ -1,19 +1,29 @@
-<h1>Mood:</h1>
-<h3><%= @link.title %></h1>
-<h2>Description: <%= @link.url %></h2>
-  <hr>
-<h3>Times that <%= current_user.username %> has felt <%= @link.title %></h3>
+<div class="show-links">
 
-<!-- want a link_to new article here -->
-<%= link_to 'Create Article', new_link_article_url(@link) %>
+  <div class="show-links-header">
+    <div class="show-links-title">
+      <h2>Mood:</h2>
+      <h3><%= @link.title %></h3>
+      <h4>Description: <%= @link.url %></h4>
+    </div>
+      <hr>
+      <h3 class='times-i-felt'>Times that <%= current_user.username %> has felt <%= @link.title %></h3>
+      <!-- want a link_to new article here -->
+      <%= link_to 'Create Article', new_link_article_url(@link), :class => 'show-links-create-article' %>
+  </div>
+</div>
 
 
-<!-- want a list of all associated articles here -->
+  <!-- want a list of all associated articles here -->
+<div class="articles-made">
 
-<ul>
-  <% @link.articles.each do |article| %>
-  <li>
-    <%= link_to article.body.split[0..6].join(' ') , article_url(article)%>
-  </li>
-  <% end %>
-</ul>
+  <ul>
+    <% @link.articles.each do |article| %>
+    <li class='article-info'>
+      <%= article.date %>
+      <%= link_to article.body.split[0..6].join(' ') , article_url(article)%>
+    </li>
+    <% end %>
+  </ul>
+
+</div>

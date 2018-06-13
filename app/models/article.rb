@@ -1,0 +1,18 @@
+# == Schema Information
+#
+# Table name: articles
+#
+#  id         :integer          not null, primary key
+#  title      :string
+#  body       :text
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+require 'annotate'
+class Article < ApplicationRecord
+  validates :body, :date, presence: true
+
+  belongs_to :user
+  belongs_to :link
+end

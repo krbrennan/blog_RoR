@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <section class="content">
+      <section class="article-header">
+        <h1 class="title"><%= Link.find_by_id(@article.link_id).title %></h1>
+        <!-- above line will get the name of the mood category -->
+        <h3 class="date"><%= @article.date %></h3>
+      </section>
+
+      <section class="article-body">
+        <h3 class="article-text"><%= @article.body %></h3>
+      </section>
+    </section>
+
+  </body>
+</html>

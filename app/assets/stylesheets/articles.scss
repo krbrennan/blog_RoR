@@ -1,0 +1,121 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: rgba(0, 184, 148, 0.5);
+}
+
+#newMood {
+  display: flex;
+  flex-direction: column;
+
+}
+
+#title {
+  display: flex;
+  height: 30px;
+  order: 1;
+  h2 {
+    align-self: center;
+    width: 2em;
+    padding: 2em;
+  }
+  #title-field {
+    width: 50em;
+  }
+}
+
+#body {
+  display: flex;
+  order: 2;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  h2 {
+    align-self: center;
+    width: 2em;
+    padding: 2em;
+  }
+}
+
+#submit-btn {
+  display: flex;
+  order: 3;
+  width: 20%;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.new_post {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 500px;
+}
+
+.textbox {
+  display: flex;
+  width: 66%;
+  height: 80%;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 66%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.article-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 180%;
+  text-decoration: underline;
+
+}
+
+.date {
+  font-size: 80%;
+}
+
+.article-body {
+  display: flex;
+  outline: 2px solid wheat;
+}
+
+.article-text {
+  margin: 7px;
+  padding: 14px;
+}
+
+// New Mood
+.new-mood-head {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em;
+  text-align: center;
+
+  .back-to-mood-list-link {
+    background: rgba(112, 161, 255,1.0);
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    margin: 1.5em;
+    border-radius: 25px;
+    margin: 0 auto;
+  }
+}
+
+.new-mood-body {
+  margin: 2em;
+}

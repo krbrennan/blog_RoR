@@ -6,8 +6,7 @@
       <h3><%= @link.title %></h3>
       <h4>Description: <%= @link.url %></h4>
     </div>
-      <hr>
-      <h3 class='times-i-felt'>Times that <%= current_user.username %> has felt <%= @link.title %></h3>
+      <hr class='links-hr'>
       <!-- want a link_to new article here -->
       <%= link_to 'Create Article', new_link_article_url(@link), :class => 'show-links-create-article' %>
   </div>
@@ -17,13 +16,21 @@
   <!-- want a list of all associated articles here -->
 <div class="articles-made">
 
-  <ul>
-    <% @link.articles.each do |article| %>
-    <li class='article-info'>
-      <%= article.date %>
-      <%= link_to article.body.split[0..6].join(' ') , article_url(article)%>
-    </li>
-    <% end %>
-  </ul>
+  <table class='articles-table'>
+    <thead class='articles-made-head'>
+      <td>Date</td>
+      <td>Submitted By</td>
+      <td>How it Begins</td>
+    </thead>
+    <tbody>
+      <% @link.articles.each do |article| %>
+        <tr class='article-info'>
+          <td><%= article.date %></td>
+          <td class='middle-article'><%= article.user.username %></td>
+          <td><%= link_to article.body.split[0..6].join(' ') , article_url(article)%></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
 </div>

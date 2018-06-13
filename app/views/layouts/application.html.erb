@@ -11,18 +11,14 @@
   <body>
 
     <nav class="navbar">
-      <ul class="nav-items">
-        <section class="header-content">
-          <% if signed_in? %>
-            <li class="signed-in-as"><h4>Welcome, <%= current_user.username %></h4></li>
-            <li class="sign-out"><a class='sign-out-button' href="#"><%= link_to 'Logout', session_url, method: :delete %></a></li>
-            <li class="home"><a href="#"><%= link_to 'Home', links_url, method: :get %></a></li>
-          <% else %>
-            <li class="sign-up"><a href="#"><%= link_to 'Sign Up', new_user_url %></a></li>
-            <li class="sign-in"><a href="#"><%= link_to 'Sign In', new_session_url %></a></li>
-          <% end %>
-        </section>
-      </ul>
+      <% if signed_in? %>
+        <a class="signed-in-as">Welcome, <%= current_user.username  %></a>
+        <a href="#"><%= link_to 'Logout', session_url, :class => 'right-nav', method: :delete %></a>
+        <a href="#"><%= link_to 'Home', links_url, :class => 'right-nav', method: :get %></a>
+      <% else %>
+          <a href="#"><%= link_to 'Sign Up', new_user_url %></a>
+          <a href="#"><%= link_to 'Sign In', new_session_url %></a>
+      <% end %>
     </nav>
 
       <% flash[:errors].try(:each) do |err| %>

@@ -7,7 +7,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      p 'anus'
       redirect_to links_url
     else
       flash[:errors] = @user.errors.full_messages

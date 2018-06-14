@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @article.link_id = params[:link_id]
   end
 
   def edit
@@ -23,6 +24,7 @@ class ArticlesController < ApplicationController
     # @article = Article.new(article_params)
     @article = current_user.articles.new(article_params)
     # @article.user_id = current_user.id
+    @article.title = params[:title]
     @article.link_id = params[:link_id]
     if @article.save
       redirect_to article_url(@article)
@@ -39,6 +41,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:date, :body, :url, :user_id, :link_id)
+    params.require(:article).permit(:date, :title, :body, :url, :user_id, :link_id)
   end
 end

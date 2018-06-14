@@ -1,17 +1,26 @@
-<h1>Write about Your Feels</h1>
+
+<div class="new_article">
 
 
-<form class="new-post" action="<%= link_articles_url %>" method="post">
-<input type="hidden" name="authenticity_token" value="form_authenticity_token">
+  <h1>Write about Your Feels</h1>
 
-<label>
-  When did you feel this way?
-  <input type="date" name="article[date]" value="">
-</label>
-<label for="article">
-  <textarea id="article" class="textbox" rows="6" name="article[body]" value="" placeholder="Time of day? Set & setting? What happened? How did you react?"></textarea>
-</label>
+  <span id='new_article_mood'><%= @article.link.title %></span>
 
-<input type="submit" name="" value="Submit Post">
 
-</form>
+  <form class="new-post" action="<%= link_articles_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="form_authenticity_token">
+
+
+  <label>
+    When did you feel this way?
+    <input type="date" name="article[date]" value="">
+  </label>
+  <label for="article">
+    <textarea id="article" class="textbox" rows="6" name="article[body]" value="" placeholder="Time of day? Set & setting? What happened? How did you react?"></textarea>
+  </label>
+
+  <input class='new_article_submit_btn' type="submit" name="" value="Submit Post">
+
+  </form>
+
+</div>

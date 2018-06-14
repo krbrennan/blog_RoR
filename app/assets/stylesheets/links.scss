@@ -4,7 +4,7 @@
 
 .show-links {
   background: white;
-  padding-left: 2em;
+  padding-left: 4em;
   display: flex;
   flex-direction: row;
   padding-bottom: 5em;
@@ -25,10 +25,24 @@
         height: 2em;
         text-align: center;
       }
-    }
 
-    .links-hr {
-      margin-bottom: 3em;
+      h4 {
+        margin-bottom: 2em;
+      }
+
+      .edit-button {
+        border-bottom: none;
+        text-decoration: none;
+        background: rgba(192, 57, 43,1.0);
+        padding: 1em 2em;
+        border-radius: 10px;
+        color: white;
+      }
+
+      .links-hr {
+        margin: 3em 0;
+        width: 80vw;
+      }
     }
   }
 
@@ -37,6 +51,7 @@
     background: rgba(162, 155, 254,1.0);
     color: white;
     padding: 1em;
+    border-radius: 10px;
   }
 }
 

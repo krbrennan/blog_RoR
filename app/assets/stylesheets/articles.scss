@@ -46,19 +46,59 @@ body {
   margin: 0 auto;
 }
 
-.new_post {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  height: 500px;
+
+
+
+// (article) new.html.erb
+
+.new_article {
+  width: 80%;
+  background: white;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+
+  h1 {
+    padding: 1em;
+  }
+
+  span {
+    padding-bottom: 2em;
+  }
+
+  #new_article_mood {
+    font-size: 4em;
+  }
+
+  .new-post {
+    padding-top: 2em;
+  }
+
+  .textbox {
+    display: flex;
+    width: 66%;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 3em;
+  }
+
+  input:hover {
+    cursor: pointer;
+    transition: all .2s ease-out;
+    transform: scale(1.1,1.1);
+  }
+
+  input.new_article_submit_btn {
+    margin: 1em;
+    padding: 2em;
+    background: rgba(192, 57, 43,1.0);
+    border-radius: 10px;
+    color: white;
+    font-size: 100%;
+  }
+
 }
 
-.textbox {
-  display: flex;
-  width: 66%;
-  height: 80%;
-
-}
 
 .content {
   display: flex;

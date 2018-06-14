@@ -1,4 +1,4 @@
-<h1>Write about Your Feels, Bra</h1>
+<h1>Write about Your Feels</h1>
 
 
 <form class="new-post" action="<%= link_articles_url %>" method="post">
@@ -9,8 +9,6 @@
   <input type="date" name="article[date]" value="">
 </label>
 <label for="article">
-  <h3>Write About a Time you felt</h3>
-  <h3><%= @article.id %></h3>
   <textarea id="article" class="textbox" rows="6" name="article[body]" value="" placeholder="Time of day? Set & setting? What happened? How did you react?"></textarea>
 </label>
 

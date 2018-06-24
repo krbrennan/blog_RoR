@@ -3,13 +3,15 @@
   <div class="show-links-header">
     <div class="show-links-title">
       <h2>Mood:</h2>
-      <h3><%= @link.title %></h3>
+      <h3 class='link-title'><%= @link.title %></h3>
       <h4>Description: <%= @link.url %></h4>
       <%= link_to "Edit Mood", edit_link_url(@link.id), :class => 'edit-button', method: :get %>
       <hr class='links-hr'>
     </div>
       <!-- want a link_to new article here -->
-      <%= link_to 'Create Article', new_link_article_url(@link), :title => @link.title, :class => 'show-links-create-article' %>
+      <div class="create-article-btn-div">
+        <%= link_to 'Create Article', new_link_article_url(@link), :title => @link.title, :class => 'show-links-create-article' %>
+      </div>
   </div>
 </div>
 

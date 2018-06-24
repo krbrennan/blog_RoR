@@ -13,6 +13,11 @@
 
     .show-links-title {
 
+      .link-title {
+        margin: 0 auto;
+        font-size: 4em;
+      }
+
       h2 {
         font-weight: 700;
         font-size: 200%;
@@ -46,14 +51,21 @@
     }
   }
 
-  .show-links-create-article {
-    text-decoration: none;
-    background: rgba(162, 155, 254,1.0);
-    color: white;
-    padding: 1em;
-    border-radius: 10px;
+  .create-article-btn-div {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+
+    .show-links-create-article {
+      text-decoration: none;
+      background: rgba(162, 155, 254,1.0);
+      color: white;
+      padding: 1em;
+      border-radius: 10px;
+    }
   }
 }
+
 
 .article-info {
   list-style: none;

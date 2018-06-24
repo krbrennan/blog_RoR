@@ -16,9 +16,11 @@
       <% @links.each do |link|%>
       <div class="browse-moods-li">
         <tr>
-          <td class='link-td'><%= link_to link.title, link_url(link) %></td>
-          <td><%= link.user.username %></td>
-          <td><%= link.url %></td>
+          <% if link.user_id == current_user.id %>
+            <td class='link-td'><%= link_to link.title, link_url(link) %></td>
+            <td><%= link.user.username %></td>
+            <td><%= link.url %></td>
+            <% end %>
         </tr>
       </div>
       <% end %>

@@ -8,13 +8,17 @@
 
     <section class="content">
       <section class="article-header">
-        <h1 class="title"><%= Link.find_by_id(@article.link_id).title %></h1>
+        <% if @article.user_id == current_user.id %>
+          <h1 class="title"><%= Link.find_by_id(@article.link_id).title %></h1>
         <!-- above line will get the name of the mood category -->
-        <h3 class="date"><%= @article.date %></h3>
+          <h3 class="date"><%= @article.date %></h3>
+        <% end %>
       </section>
 
       <section class="article-body">
+      <% if @article.user_id == current_user.id %>
         <h3 class="article-text"><%= @article.body %></h3>
+      <% end %>
       </section>
     </section>
 

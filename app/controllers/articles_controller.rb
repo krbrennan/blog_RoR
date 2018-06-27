@@ -4,6 +4,8 @@ class ArticlesController < ApplicationController
   def new
     @article = Article.new
     @article.link_id = params[:link_id]
+    @article.body = params[:body]
+    @article.date = params[:date]
   end
 
   def edit
@@ -11,6 +13,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
+
   end
 
   def show
@@ -18,6 +21,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
+    @articles = current_user.articles.all
   end
 
   def create
@@ -41,6 +45,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:date, :title, :body, :url, :user_id, :link_id)
+    params.require(:article).permit(:title, :body, :url, :user_id, :link_id)
   end
 end

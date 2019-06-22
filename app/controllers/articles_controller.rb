@@ -38,6 +38,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:date, :body, :url, :user_id, :link_id)
+    params.require(:article).permit(:body, :url, :user_id, :link_id)
   end
 end

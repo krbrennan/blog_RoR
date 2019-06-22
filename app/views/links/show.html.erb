@@ -25,7 +25,7 @@
     <tbody>
       <% @link.articles.each do |article| %>
         <tr class='article-info'>
-          <td><%= article.date %></td>
+
           <td class='middle-article'><%= article.user.username %></td>
           <td><%= link_to article.body.split[0..6].join(' ') , article_url(article)%></td>
         </tr>

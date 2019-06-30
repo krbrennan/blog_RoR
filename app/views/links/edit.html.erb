@@ -1,2 +1,25 @@
-<h1>Links#edit</h1>
-<p>Find me in app/views/links/edit.html.erb</p>
+<div class="new-mood-head">
+  <h1>Edit Your Mood</h1>
+  <%= link_to "Back to Mood List", links_url, :class => 'back-to-mood-list-link', method: :get %>
+</div>
+
+<div class="new-mood-body">
+
+  <form id='newMood' action="<%= link_url(@link.id) %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label id='title'>
+    <h2>Title</h2>
+    <input id='title-field' type="text" name="link[title]" value="<%= @link.title %>">
+  </label>
+
+  <label id='body'>
+    <h2>Body</h2>
+    <textarea rows="18" cols="90" name="link[url]" value="<%= @link.url %>" placeholder="Describe (however you like) what kind of mood or emotion you would like to write about when you come back here to submit a post"></textarea>
+  </label>
+
+  <input id='submit-btn' type="submit" name="" value="Save Post">
+  </form>
+
+</div>

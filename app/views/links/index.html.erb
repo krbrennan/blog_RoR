@@ -13,6 +13,7 @@
       </tr>
     </thead>
     <tbody>
+<<<<<<< HEAD
       <% @links.each do |link|%>
       <div class="browse-moods-li">
         <tr>
@@ -22,6 +23,20 @@
         </tr>
       </div>
       <% end %>
+=======
+
+      <div class="browse-moods-li">
+        <tr>
+          <% @user_links = Link.where(user_id: @current_user.id) %>
+            <% @user_links.each do |link| %>
+                <td class='link-td'><%= link_to link.title, link_url(link) %></td>
+                <td><%= link.user.username %></td>
+                <td><%= link.url %></td>
+            <% end %>
+        </tr>
+      </div>
+
+>>>>>>> a4a1d431433ae8c6fc67cf01b42697f94e9670b8
     </tbody>
   </table>
 

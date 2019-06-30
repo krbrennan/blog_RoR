@@ -15,4 +15,6 @@ class Article < ApplicationRecord
 
   belongs_to :user
   belongs_to :link
+  has_one :link_title
+
 end

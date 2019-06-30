@@ -4,7 +4,7 @@
 
 .show-links {
   background: white;
-  padding-left: 2em;
+  padding-left: 4em;
   display: flex;
   flex-direction: row;
   padding-bottom: 5em;
@@ -12,6 +12,11 @@
   .show-links-header {
 
     .show-links-title {
+
+      .link-title {
+        margin: 0 auto;
+        font-size: 4em;
+      }
 
       h2 {
         font-weight: 700;
@@ -25,20 +30,42 @@
         height: 2em;
         text-align: center;
       }
-    }
 
-    .links-hr {
-      margin-bottom: 3em;
+      h4 {
+        margin-bottom: 2em;
+      }
+
+      .edit-button {
+        border-bottom: none;
+        text-decoration: none;
+        background: rgba(192, 57, 43,1.0);
+        padding: 1em 2em;
+        border-radius: 10px;
+        color: white;
+      }
+
+      .links-hr {
+        margin: 3em 0;
+        width: 80vw;
+      }
     }
   }
 
-  .show-links-create-article {
-    text-decoration: none;
-    background: rgba(162, 155, 254,1.0);
-    color: white;
-    padding: 1em;
+  .create-article-btn-div {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+
+    .show-links-create-article {
+      text-decoration: none;
+      background: rgba(162, 155, 254,1.0);
+      color: white;
+      padding: 1em;
+      border-radius: 10px;
+    }
   }
 }
+
 
 .article-info {
   list-style: none;

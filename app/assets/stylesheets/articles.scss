@@ -3,7 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
+<<<<<<< HEAD
   background-color: #674172;
+=======
+  background-color: rgba(0, 184, 148, 0.5);
+>>>>>>> a4a1d431433ae8c6fc67cf01b42697f94e9670b8
 }
 
 #newMood {
@@ -46,6 +50,7 @@ body {
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
 .new_post {
   display: flex;
   flex-direction: column;
@@ -60,6 +65,62 @@ body {
 
 }
 
+=======
+
+
+
+// (article) new.html.erb
+
+.new_article {
+  width: 80%;
+  background: white;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+
+  h1 {
+    padding: 1em;
+  }
+
+  span {
+    padding-bottom: 2em;
+  }
+
+  #new_article_mood {
+    font-size: 4em;
+  }
+
+  .new-post {
+    padding-top: 2em;
+  }
+
+  .textbox {
+    display: flex;
+    width: 66%;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 3em;
+  }
+
+  input:hover {
+    cursor: pointer;
+    transition: all .2s ease-out;
+    transform: scale(1.1,1.1);
+  }
+
+  input.new_article_submit_btn {
+    margin: 1em;
+    padding: 2em;
+    background: rgba(192, 57, 43,1.0);
+    border-radius: 10px;
+    color: white;
+    font-size: 100%;
+  }
+
+}
+
+
+>>>>>>> a4a1d431433ae8c6fc67cf01b42697f94e9670b8
 .content {
   display: flex;
   flex-direction: column;

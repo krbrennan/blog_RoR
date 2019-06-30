@@ -10,11 +10,12 @@ class LinksController < ApplicationController
   end
 
   def update
-    @link = current_user.links.find(params[:link_id])
+    # @link = current_user.links.find(params[:link_id])
+    @link = Link.find(params[:id])
     @link.user_id = current_user.id
 
     if @link.update_attributes(link_params)
-      redirect_to links(@link.id)
+      redirect_to links_url
     else
       flash.now[:errors] = @link.errors.full_messages
       render :edit

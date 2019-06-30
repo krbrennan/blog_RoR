@@ -3,12 +3,17 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @article.link_id = params[:link_id]
+    @article.body = params[:body]
+    @article.date = params[:date]
   end
 
   def edit
+    @article = Article.find(params[:id])
   end
 
   def update
+
   end
 
   def show
@@ -16,12 +21,14 @@ class ArticlesController < ApplicationController
   end
 
   def index
+    @articles = current_user.articles.all
   end
 
   def create
     # @article = Article.new(article_params)
     @article = current_user.articles.new(article_params)
     # @article.user_id = current_user.id
+    @article.title = params[:title]
     @article.link_id = params[:link_id]
     if @article.save
       redirect_to article_url(@article)
@@ -38,6 +45,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:body, :url, :user_id, :link_id)
+    params.require(:article).permit(:title, :body, :url, :user_id, :link_id)
   end
 end

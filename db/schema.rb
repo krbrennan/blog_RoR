@@ -22,11 +22,14 @@ ActiveRecord::Schema.define(version: 20190629230828) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "link_id"
+    t.datetime "date"
   end
 
   create_table "links", force: :cascade do |t|
     t.string "title"
     t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "user_id"
   end
 

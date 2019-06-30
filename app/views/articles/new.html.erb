@@ -1,15 +1,22 @@
-<h1>Write away</h1>
+
+<div class="new_article">
+
+  <h1>Write about Your Feels</h1>
+
+  <span id='new_article_mood'><%= @article.link.title %></span>
 
 
-<form class="new-post" action="<%= link_articles_url %>" method="post">
-<input type="hidden" name="authenticity_token" value="form_authenticity_token">
+  <form class="new-post" action="<%= link_articles_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="form_authenticity_token">
 
-<label for="article">
-  <h3>Write About a Time you felt</h3>
-  <h3><%= @article.id %></h3>
-  <textarea id="article" class="textbox" rows="6" name="article[body]" value="" placeholder="Time of day? Set & setting? What happened? How did you react?"></textarea>
-</label>
+  <input type="hidden" name="article[title]" value="<%= @article.link.title %>">
 
-<input type="submit" name="" value="Submit Post">
+  <label>
+    <textarea value="<%= @article.body %>" name="article[body]" id="article" class="textbox" rows="10" placeholder="Time of day? Set & setting? What happened? How did you react?"></textarea>
+  </label>
 
-</form>
+  <input class='new_article_submit_btn' type="submit" name="" value="Submit Post">
+
+  </form>
+
+</div>

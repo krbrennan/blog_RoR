@@ -8,12 +8,21 @@
 
     <section class="content">
       <section class="article-header">
-        <h1 class="title"><%= Link.find_by_id(@article.link_id).title %></h1>
+
+        <% @current_link = Link.find_by_id(@article.link_id) %>
+
+        <% if @article.user_id == current_user.id %>
+          <h1 class="title"><%= @current_link.title %></h1>
         <!-- above line will get the name of the mood category -->
+        <% end %>
       </section>
 
+
+<!-- Below I want to do a proper ActiveRecord index from the controller -->
       <section class="article-body">
+      <% if @article.user_id == current_user.id %>
         <h3 class="article-text"><%= @article.body %></h3>
+      <% end %>
       </section>
     </section>
 

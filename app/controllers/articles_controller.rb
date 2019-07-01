@@ -5,7 +5,6 @@ class ArticlesController < ApplicationController
     @article = Article.new
     @article.link_id = params[:link_id]
     @article.body = params[:body]
-    @article.date = params[:date]
   end
 
   def edit

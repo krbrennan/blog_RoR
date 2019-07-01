@@ -14,6 +14,7 @@
     .show-links-title {
 
       .link-title {
+
         margin: 0 auto;
         font-size: 4em;
       }
@@ -67,15 +68,24 @@
 }
 
 #submit-btn{
-  height: 1em;
+  height: 4em;
   font-weight: bold;
   background: rgba(162, 155, 254,1.0);
+  border-radius: 1em;
 }
 
 .article-info {
   list-style: none;
 }
 
+
+#newMood {
+  height: 100vh;
+}
+
+.new_link_submit_btn {
+  height: 4em;
+}
 
 // Browse Moods
 //
@@ -90,15 +100,15 @@
 
   .create-new-mood {
     text-decoration: none;
-    background: white;
+    background: rgba(255, 255, 255, .3);
     padding: 1.5em;
     margin: 0 auto;
     border-radius: 20px;
     color: black;
-    font-weight: 700;
   }
   .create-new-mood:hover {
-    background: rgba(255, 127, 80,1.0)
+    background: rgba(255, 255, 255, .6);
+    font-weight: 700;
   }
 
   .browse-moods-h1 {
@@ -106,6 +116,7 @@
   }
 
   .browse-moods-table {
+    width: 100%;
     margin-top: 2em;
     padding: 2em;
     background: white;

@@ -1,8 +1,28 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.sign-up{
+
+.sign-up {
+  text-align: center;
   margin: 0 auto;
-  background: white;
+  background: rgba(255,255,255,0.5);
   border: .5px solid black;
+  width: 25%;
+  padding: 2em 2em 4em 2em;
+  border-radius: 1em;
+
+  .sign-up-btn{
+    color: black;
+    font-size: 2em;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: .4em;
+    border-radius: 1em;
+    background: rgba(255, 255, 255, .3);
+  }
+
+  .sign-up-btn:hover{
+    font-weight: bold;
+    background: rgba(255, 255, 255, .6);
+  }
 }

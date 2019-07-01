@@ -13,15 +13,6 @@
       </tr>
     </thead>
     <tbody>
-      <% @links.each do |link|%>
-      <div class="browse-moods-li">
-        <tr>
-          <td class='link-td'><%= link_to link.title, link_url(link) %></td>
-          <td><%= link.user.username %></td>
-          <td><%= link.url %></td>
-        </tr>
-      </div>
-      <% end %>
 
       <div class="browse-moods-li">
         <tr>

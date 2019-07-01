@@ -20,15 +20,12 @@
 
   <table class='articles-table'>
     <thead class='articles-made-head'>
-      <td>Date</td>
-      <td>Submitted By</td>
-      <td>How it Begins</td>
+      <td>Recent Entries</td>
     </thead>
     <tbody>
       <% @link.articles.each do |article| %>
         <tr class='article-info'>
-          <td class='middle-article'><%= article.user.username %></td>
-          <td><%= link_to article.body.split[0..6].join(' ') , article_url(article)%></td>
+          <td><%= link_to article.body.split[0..14].join(' ') , article_url(article)%></td>
         </tr>
       <% end %>
     </tbody>
